@@ -8,20 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		2F10E0B221BAE8C700F57B85 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F10E0B121BAE8C700F57B85 /* AppDelegate.swift */; };
-		2F10E0B421BAE8C700F57B85 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F10E0B321BAE8C700F57B85 /* ViewController.swift */; };
+		2F10E0B421BAE8C700F57B85 /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F10E0B321BAE8C700F57B85 /* ImageViewController.swift */; };
 		2F10E0B721BAE8C700F57B85 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F10E0B521BAE8C700F57B85 /* Main.storyboard */; };
 		2F10E0B921BAE8CA00F57B85 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F10E0B821BAE8CA00F57B85 /* Assets.xcassets */; };
 		2F10E0BC21BAE8CA00F57B85 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F10E0BA21BAE8CA00F57B85 /* LaunchScreen.storyboard */; };
+		2F10E0C821BAE9A500F57B85 /* ImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F10E0C721BAE9A500F57B85 /* ImageTableViewCell.swift */; };
+		2F10E0CA21BAE9E100F57B85 /* ImageDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F10E0C921BAE9E100F57B85 /* ImageDataStore.swift */; };
+		2F10E0CC21BAEA2000F57B85 /* ImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F10E0CB21BAEA2000F57B85 /* ImageModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		2F10E0AE21BAE8C700F57B85 /* TableViewPrefetch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TableViewPrefetch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F10E0B121BAE8C700F57B85 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		2F10E0B321BAE8C700F57B85 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2F10E0B321BAE8C700F57B85 /* ImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
 		2F10E0B621BAE8C700F57B85 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2F10E0B821BAE8CA00F57B85 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2F10E0BB21BAE8CA00F57B85 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2F10E0BD21BAE8CA00F57B85 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2F10E0C721BAE9A500F57B85 /* ImageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTableViewCell.swift; sourceTree = "<group>"; };
+		2F10E0C921BAE9E100F57B85 /* ImageDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDataStore.swift; sourceTree = "<group>"; };
+		2F10E0CB21BAEA2000F57B85 /* ImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +60,49 @@
 		2F10E0B021BAE8C700F57B85 /* TableViewPrefetch */ = {
 			isa = PBXGroup;
 			children = (
-				2F10E0B121BAE8C700F57B85 /* AppDelegate.swift */,
-				2F10E0B321BAE8C700F57B85 /* ViewController.swift */,
+				2F10E0C521BAE8F900F57B85 /* Models */,
+				2F10E0C421BAE8F100F57B85 /* Views */,
+				2F10E0C321BAE8D800F57B85 /* Controllers */,
+				2F10E0C621BAE91200F57B85 /* Other Gubbins */,
+			);
+			path = TableViewPrefetch;
+			sourceTree = "<group>";
+		};
+		2F10E0C321BAE8D800F57B85 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				2F10E0B321BAE8C700F57B85 /* ImageViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		2F10E0C421BAE8F100F57B85 /* Views */ = {
+			isa = PBXGroup;
+			children = (
 				2F10E0B521BAE8C700F57B85 /* Main.storyboard */,
+				2F10E0C721BAE9A500F57B85 /* ImageTableViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		2F10E0C521BAE8F900F57B85 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2F10E0C921BAE9E100F57B85 /* ImageDataStore.swift */,
+				2F10E0CB21BAEA2000F57B85 /* ImageModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		2F10E0C621BAE91200F57B85 /* Other Gubbins */ = {
+			isa = PBXGroup;
+			children = (
+				2F10E0B121BAE8C700F57B85 /* AppDelegate.swift */,
 				2F10E0B821BAE8CA00F57B85 /* Assets.xcassets */,
 				2F10E0BA21BAE8CA00F57B85 /* LaunchScreen.storyboard */,
 				2F10E0BD21BAE8CA00F57B85 /* Info.plist */,
 			);
-			path = TableViewPrefetch;
+			path = "Other Gubbins";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,7 +176,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2F10E0B421BAE8C700F57B85 /* ViewController.swift in Sources */,
+				2F10E0C821BAE9A500F57B85 /* ImageTableViewCell.swift in Sources */,
+				2F10E0CC21BAEA2000F57B85 /* ImageModel.swift in Sources */,
+				2F10E0CA21BAE9E100F57B85 /* ImageDataStore.swift in Sources */,
+				2F10E0B421BAE8C700F57B85 /* ImageViewController.swift in Sources */,
 				2F10E0B221BAE8C700F57B85 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -284,7 +328,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GJW24JA7KV;
-				INFOPLIST_FILE = TableViewPrefetch/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/TableViewPrefetch/Other Gubbins/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -302,7 +346,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GJW24JA7KV;
-				INFOPLIST_FILE = TableViewPrefetch/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/TableViewPrefetch/Other Gubbins/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
