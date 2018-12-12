@@ -80,7 +80,7 @@ extension ImageViewController: UITableViewDataSource {
 extension ImageViewController: UITableViewDataSourcePrefetching {
     func tableView(_ tableView: UITableView, prefetchRowsAt indexPaths: [IndexPath]) {
         for indexPath in indexPaths {
-            guard let _ = loadingOperations[indexPath] else { return }
+            if let _ = loadingOperations[indexPath] { return }
             if let dataLoader = dataStore.loadImage(at: indexPath.row) {
                 loadingQueue.addOperation(dataLoader)
                 loadingOperations[indexPath] = dataLoader
